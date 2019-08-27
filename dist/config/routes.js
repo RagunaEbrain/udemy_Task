@@ -1,0 +1,26 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.router = undefined;
+
+var _express = require('express');
+
+var _express2 = _interopRequireDefault(_express);
+
+var _invoice = require('../api/controller/invoice.controller');
+
+var _invoice2 = _interopRequireDefault(_invoice);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var router = exports.router = _express2.default.Router();
+
+// Invoices
+router.get('/invoice-listing', _invoice2.default.findAll);
+router.post('/invoice-listing', _invoice2.default.create);
+router.get('/invoice-listing/:id', _invoice2.default.findOne);
+router.delete('/invoice-listing/:id', _invoice2.default.delete);
+router.put('/invoice-listing/:id', _invoice2.default.update);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb25maWcvcm91dGVzLmpzIl0sIm5hbWVzIjpbInJvdXRlciIsImV4cHJlc3MiLCJSb3V0ZXIiLCJnZXQiLCJpbnZvaWNlQ29udHJvbGxlciIsImZpbmRBbGwiLCJwb3N0IiwiY3JlYXRlIiwiZmluZE9uZSIsImRlbGV0ZSIsInB1dCIsInVwZGF0ZSJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBOzs7O0FBQ0E7Ozs7OztBQUVPLElBQU1BLDBCQUFTQyxrQkFBUUMsTUFBUixFQUFmOztBQUVQO0FBQ0FGLE9BQU9HLEdBQVAsQ0FBVyxrQkFBWCxFQUErQkMsa0JBQWtCQyxPQUFqRDtBQUNBTCxPQUFPTSxJQUFQLENBQVksa0JBQVosRUFBZ0NGLGtCQUFrQkcsTUFBbEQ7QUFDQVAsT0FBT0csR0FBUCxDQUFXLHNCQUFYLEVBQW1DQyxrQkFBa0JJLE9BQXJEO0FBQ0FSLE9BQU9TLE1BQVAsQ0FBYyxzQkFBZCxFQUFzQ0wsa0JBQWtCSyxNQUF4RDtBQUNBVCxPQUFPVSxHQUFQLENBQVcsc0JBQVgsRUFBbUNOLGtCQUFrQk8sTUFBckQiLCJmaWxlIjoicm91dGVzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGV4cHJlc3MgZnJvbSAnZXhwcmVzcyc7XHJcbmltcG9ydCBpbnZvaWNlQ29udHJvbGxlciBmcm9tICcuLi9hcGkvY29udHJvbGxlci9pbnZvaWNlLmNvbnRyb2xsZXInO1xyXG5cclxuZXhwb3J0IGNvbnN0IHJvdXRlciA9IGV4cHJlc3MuUm91dGVyKCk7XHJcblxyXG4vLyBJbnZvaWNlc1xyXG5yb3V0ZXIuZ2V0KCcvaW52b2ljZS1saXN0aW5nJywgaW52b2ljZUNvbnRyb2xsZXIuZmluZEFsbCk7XHJcbnJvdXRlci5wb3N0KCcvaW52b2ljZS1saXN0aW5nJywgaW52b2ljZUNvbnRyb2xsZXIuY3JlYXRlKTtcclxucm91dGVyLmdldCgnL2ludm9pY2UtbGlzdGluZy86aWQnLCBpbnZvaWNlQ29udHJvbGxlci5maW5kT25lKTtcclxucm91dGVyLmRlbGV0ZSgnL2ludm9pY2UtbGlzdGluZy86aWQnLCBpbnZvaWNlQ29udHJvbGxlci5kZWxldGUpO1xyXG5yb3V0ZXIucHV0KCcvaW52b2ljZS1saXN0aW5nLzppZCcsIGludm9pY2VDb250cm9sbGVyLnVwZGF0ZSk7Il19
